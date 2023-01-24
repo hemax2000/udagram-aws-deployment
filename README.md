@@ -1,8 +1,5 @@
 # Hosting a Full-Stack Application
 
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
-
----
 
 In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
 
@@ -16,57 +13,71 @@ The project will also include writing documentation and runbooks covering the op
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
 
+----------------------------------------------
+
+you can see view the project at: http://udagram-4095-0013-6750.s3-website-us-east-1.amazonaws.com
+
+## Dependencies
 
 
-### Dependencies
-
-```
 - Node v14.15.1 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
 
 - npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
 
-- AWS CLI v2, v1 can work but was not tested for this project
+- AWS CLI v2
 
 - A RDS database running Postgres.
 
-- A S3 bucket for hosting uploaded pictures.
+- A S3 bucket for Frontend static pages.
 
-```
+- A EB for hosting Website APIs
 
-### Installation
 
-Provision the necessary AWS services needed for running the application:
 
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
-1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
-1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
-1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
-1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.
+## Screanshots
 
-## Testing
+#### S3 Bucket
 
-This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
+<img width="1080" alt="image" src="https://user-images.githubusercontent.com/95032871/214298993-28bebc72-aed3-4ae7-9a09-4053a314e232.png">
 
-1. `cd starter/udagram-frontend`
-1. `npm run test`
-1. `npm run e2e`
 
-There are no Unit test on the back-end
+#### EB
 
-### Unit Tests:
+<img width="1080" alt="image" src="https://user-images.githubusercontent.com/95032871/214299204-171a3338-5721-4ea3-af63-0cdfa0d57ad8.png">
 
-Unit tests are using the Jasmine Framework.
+#### RDS 
 
-### End to End Tests:
+<img width="1080" alt="image" src="https://user-images.githubusercontent.com/95032871/214299954-63ca6e8a-0002-4883-b0c8-5be712dbaf7e.png">
 
-The e2e tests are using Protractor and Jasmine.
 
-## Built With
+#### CircleCI Pipeline
 
-- [Angular](https://angular.io/) - Single Page Application Framework
-- [Node](https://nodejs.org) - Javascript Runtime
-- [Express](https://expressjs.com/) - Javascript API Framework
+<img width="1079" alt="image" src="https://user-images.githubusercontent.com/95032871/214301336-dfd345dd-e41f-4f57-a9ae-9498e40ffcdd.png">
 
-## License
+- build
 
-[License](LICENSE.txt)
+<img width="1080" alt="image" src="https://user-images.githubusercontent.com/95032871/214301725-13a83310-0b93-4382-8e52-859c63314ddf.png">
+
+<img width="1080" alt="image" src="https://user-images.githubusercontent.com/95032871/214302128-d5319ba3-8d59-4b3d-9311-c00c9ba37c2e.png">
+
+
+- deploy
+
+<img width="1077" alt="image" src="https://user-images.githubusercontent.com/95032871/214302338-e722b863-3cb1-405c-b2f7-b286ea7fba77.png">
+
+
+- ENV 
+
+<img width="1080" alt="image" src="https://user-images.githubusercontent.com/95032871/214302857-3bc5dd9d-cb63-4619-baee-43fc6fb92bc4.png">
+
+---------------------------------------------
+
+#### AWS proccess
+
+<img width="375" alt="image" src="https://user-images.githubusercontent.com/95032871/214306756-9e76fdb2-0a74-4851-98b4-cd5aed4e73b4.png">
+
+
+#### pipeline proccess
+
+![pipeline](https://user-images.githubusercontent.com/95032871/214308228-7173d220-70d7-407d-a97b-f5b09f3264db.jpg)
+
