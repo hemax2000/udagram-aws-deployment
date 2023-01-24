@@ -72,12 +72,12 @@ you can see view the project at: http://udagram-4095-0013-6750.s3-website-us-eas
 
 ---------------------------------------------
 
-#### AWS proccess
+## Changes
 
-<img width="375" alt="image" src="https://user-images.githubusercontent.com/95032871/214306756-9e76fdb2-0a74-4851-98b4-cd5aed4e73b4.png">
+- updated the deploy script in the backend json file to allow cricleCi to set env veriables in EB:
 
+    "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy && eb setenv AWS_BUCKET=$AWS_BUCKET AWS_PROFILE=$AWS_PROFILE AWS_REGION=$AWS_REGION JWT_SECRET=$JWT_SECRET POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME URL=$URL"
+    
+- Added 3 files for documentation and updated some of the designs
 
-#### pipeline proccess
-
-![pipeline](https://user-images.githubusercontent.com/95032871/214308228-7173d220-70d7-407d-a97b-f5b09f3264db.jpg)
 
